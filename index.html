@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy National Princess Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+overflow:hidden;
+background:
+radial-gradient(circle at top,#ffedf6,#f9e8ff,#f7d8ff,#f3b7e8);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+body::before{
+content:"";
+position:absolute;
+width:300%;
+height:300%;
+background:
+radial-gradient(circle,#ffffff55 1px,transparent 1px);
+background-size:50px 50px;
+animation:stars 80s linear infinite;
+opacity:.4;
+}
+
+@keyframes stars{
+from{transform:translateY(0);}
+to{transform:translateY(-800px);}
+}
+
+.card{
+
+width:90%;
+max-width:800px;
+padding:60px;
+text-align:center;
+
+background:rgba(255,255,255,.18);
+
+border:1px solid rgba(255,255,255,.3);
+
+backdrop-filter:blur(18px);
+
+border-radius:35px;
+
+box-shadow:0 20px 60px rgba(255,105,180,.35);
+
+position:relative;
+
+animation:fadeUp 1.5s ease;
+z-index:5;
+
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+.crown{
+
+font-size:70px;
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:65px;
+
+margin-top:10px;
+
+color:white;
+
+text-shadow:0 0 20px #ff5ea8;
+
+}
+
+.subtitle{
+
+margin-top:10px;
+
+font-size:20px;
+
+opacity:.95;
+
+}
+
+button{
+
+margin-top:45px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:white;
+
+color:#ff3d8d;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:0 15px 40px rgba(255,255,255,.35);
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+background:#ffe0ef;
+
+}
+
+#message{
+
+display:none;
+
+margin-top:45px;
+
+font-size:22px;
+
+line-height:1.8;
+
+animation:fade 1.5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+.signature{
+
+margin-top:35px;
+
+font-family:'Great Vibes',cursive;
+
+font-size:42px;
+
+color:#fff;
+
+}
+
+.heart{
+
+position:absolute;
+
+color:white;
+
+font-size:20px;
+
+animation:rise linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes rise{
+
+from{
+
+transform:translateY(120vh) scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-20vh) scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="crown">👑</div>
+
+<h1>Happy National Princess Day</h1>
+
+<p class="subtitle">
+To the most beautiful Princess in my world ❤️
+</p>
+
+<button onclick="showMessage()">
+Open Your Surprise ✨
+</button>
+
+<div id="message">
+
+<p>
+
+My Dearest Muskan,
+
+<br><br>
+
+Today is National Princess Day, but honestly...
+I don't need a special day to remind me that you are my Princess.
+
+You are the reason ordinary moments become beautiful,
+the smile that brightens my darkest days,
+the calm after every storm,
+and the dream I never want to wake up from.
+
+Every heartbeat whispers your name.
+Every prayer carries your happiness.
+Every future I imagine has only one Queen...
+and that is you.
+
+I promise to protect your smile,
+celebrate your victories,
+hold your hand through every challenge,
+and love you a little more with every passing day.
+
+Thank you for being the most precious part of my life.
+
+You will always be
+my Princess,
+my peace,
+my happiness,
+my forever.
+
+❤️👑
+
+</p>
+
+<div class="signature">
+Forever Yours,<br>
+Rajat ❤️
+</div>
+
+</div>
+
+</div>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("message").style.display="block";
+
+}
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=Math.random()>0.5?"❤":"✨";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+heart.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},11000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
