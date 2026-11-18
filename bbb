@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Muskan, my Princess</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#1a0b2e;--bg2:#3b1255;--bg3:#7a2a6e;--gold:#f6d28b;--rose:#ff9ec7;--ink:#fff3fa;--glass:rgba(255,255,255,.08);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:linear-gradient(160deg,var(--bg1),var(--bg2) 55%,var(--bg3));background-attachment:fixed;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.6;overflow-x:hidden;min-height:100vh}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+section{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:64px 22px;text-align:center}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.crown{width:130px;filter:drop-shadow(0 0 22px rgba(246,210,139,.8));animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(-2deg)}}
+.script{font-family:'Great Vibes',cursive,serif;color:var(--gold);text-shadow:0 0 24px rgba(246,210,139,.5)}
+h1{font-size:clamp(46px,11vw,84px);line-height:1.1;margin:14px 0 6px;font-weight:400}
+.sub{opacity:.85;letter-spacing:.18em;text-transform:uppercase;font-size:14px}
+button{font:inherit;font-weight:600;margin-top:34px;padding:14px 34px;border-radius:40px;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(246,210,139,.25),rgba(255,158,199,.25));color:var(--ink);cursor:pointer;backdrop-filter:blur(8px);box-shadow:0 0 30px rgba(246,210,139,.3);transition:transform .2s}
+button:active{transform:scale(.96)}
+#story{display:none}
+.show{animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+h2{font-size:clamp(36px,8vw,56px);font-weight:400;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:10px}
+.card{background:var(--glass);border:1px solid rgba(246,210,139,.3);border-radius:20px;padding:22px 18px;backdrop-filter:blur(10px);opacity:0;transform:translateY(24px);transition:all .8s ease}
+.card.in{opacity:1;transform:none}
+.card b{display:block;font-size:26px;color:var(--gold);margin-bottom:4px}
+.poem{font-style:italic;font-size:24px;border-left:2px solid var(--gold);border-right:2px solid var(--gold);padding:10px 18px;margin:0 auto;max-width:520px}
+.poem p{margin:12px 0}
+.letter{background:var(--glass);border:1px solid rgba(255,158,199,.4);border-radius:24px;padding:30px 24px;text-align:left;backdrop-filter:blur(10px)}
+.letter p{margin:14px 0}
+.sign{text-align:right;font-size:38px}
+.foot{opacity:.7;font-size:15px;padding-bottom:90px}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<section class="hero" id="hero">
+  <svg class="crown" viewBox="0 0 120 90" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0b8"/><stop offset="1" stop-color="#e0a64a"/></linearGradient></defs>
+    <path d="M10 75 L4 25 L34 48 L60 10 L86 48 L116 25 L110 75 Z" fill="url(#g)" stroke="#fff6d6" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="10" y="72" width="100" height="12" rx="5" fill="url(#g)"/>
+    <circle cx="4" cy="25" r="6" fill="#ff9ec7"/><circle cx="60" cy="10" r="7" fill="#ff9ec7"/><circle cx="116" cy="25" r="6" fill="#ff9ec7"/>
+    <circle cx="35" cy="78" r="3" fill="#fff"/><circle cx="60" cy="78" r="3" fill="#fff"/><circle cx="85" cy="78" r="3" fill="#fff"/>
+  </svg>
+  <p class="sub" style="margin-top:20px">National Princess Day</p>
+  <h1 class="script">Muskan</h1>
+  <p>Aaj ka din sirf tere naam.</p>
+  <button id="open">Tap karo, ek surprise hai</button>
+</section>
+
+<div id="story">
+  <section>
+    <h2 class="script">Meri Princess</h2>
+    <p>Log kehte hain princess wo hoti hai jiske sar pe taj ho. Maine dekha hai ki tere paas taj ki zarurat hi nahi, tera hona hi kaafi hai.</p>
+  </section>
+
+  <section>
+    <h2 class="script">Tujhme jo khaas hai</h2>
+    <div class="grid">
+      <div class="card"><b>Teri Muskaan</b>Naam hi kaafi hai, aur hasi usse bhi zyada. Din kharab ho to bhi theek ho jaata hai.</div>
+      <div class="card"><b>Teri Aankhein</b>Unme ek shaant sa jahaan hai. Main wahan ruk jaata hoon, bina kisi jaldi ke.</div>
+      <div class="card"><b>Tera Saath</b>Tu paas ho to khamoshi bhi baat karti hai. Aur door ho to baatein bhi kam lagti hain.</div>
+      <div class="card"><b>Teri Parwaah</b>Tu bina bole sab samajh leti hai. Ye hunar sabko nahi milta.</div>
+      <div class="card"><b>Teri Ladaaiyan</b>Wo choti si naraazgiyan bhi pyaari hain. Kyunki unke baad hum aur paas aate hain.</div>
+      <div class="card"><b>Tera Hona</b>Mere har din ko ek wajah mil jaati hai, bas ye soch kar ki tu hai.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="script">Do Line Tere Naam</h2>
+    <div class="poem">
+      <p>Sab taj sar pe sajaate hain,<br>mujhe tu har subah sajaa jaati hai.</p>
+      <p>Raja rani ke qisse purane the,<br>meri kahani tujhse shuru hoti hai.</p>
+      <p>Shehar wahi hai, raaste wahi,<br>bas tu mil gayi to sab kuch apna lagne laga.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="script">Ek Chhoti Si Chitthi</h2>
+    <div class="letter">
+      <p>Muskan,</p>
+      <p>Aaj National Princess Day hai, par mere liye har din tera hi hai. Tu mere liye wo insaan hai jiske saamne main bina dikhawe ke bas main ho paata hoon.</p>
+      <p>Mujhe nahi pata kal kya hoga, par itna pata hai ki jo bhi hoga, tere saath behtar lagega. Bas aise hi hasti reh, aur meri duniya mein rehti reh.</p>
+      <p>Happy Princess Day, meri jaan.</p>
+      <p class="sign script">Tera Rajat</p>
+    </div>
+    <button id="burst">Taj pehna do</button>
+  </section>
+
+  <section class="foot">Made with dil, sirf tere liye.</section>
+</div>
+
+<script>
+(function(){
+  var cv=document.getElementById('c'),cx=cv.getContext('2d'),W,H,ps=[];
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+  size();addEventListener('resize',size);
+  function mk(x,y,burst){
+    var sy=burst?(Math.random()*-5-1):(Math.random()*.6+.2);
+    return {x:x,y:y,vx:(Math.random()-.5)*(burst?6:.6),vy:burst?sy:sy,r:Math.random()*3+1.5,a:1,
+      t:Math.random()<.5?'s':'h',burst:burst,c:Math.random()<.5?'#f6d28b':'#ff9ec7'};
+  }
+  for(var i=0;i<60;i++){var p=mk(Math.random()*W,Math.random()*H,false);p.a=Math.random();ps.push(p)}
+  function heart(x,y,s){cx.beginPath();cx.moveTo(x,y+s/4);cx.bezierCurveTo(x,y,x-s/2,y,x-s/2,y+s/4);cx.bezierCurveTo(x-s/2,y+s/2,x,y+s*.7,x,y+s);cx.bezierCurveTo(x,y+s*.7,x+s/2,y+s/2,x+s/2,y+s/4);cx.bezierCurveTo(x+s/2,y,x,y,x,y+s/4);cx.fill()}
+  function loop(){
+    cx.clearRect(0,0,W,H);
+    for(var i=ps.length-1;i>=0;i--){
+      var p=ps[i];p.x+=p.vx;p.y+=p.burst?p.vy:-p.vy*.4;
+      if(p.burst){p.vy+=.12;p.a-=.012}else{p.a+=(Math.random()-.5)*.04;p.a=Math.max(.15,Math.min(1,p.a));if(p.y<-10)p.y=H+10}
+      cx.globalAlpha=Math.max(0,p.a);cx.fillStyle=p.c;
+      if(p.t==='h')heart(p.x,p.y,p.r*4);else{cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.3);cx.fill()}
+      if(p.burst&&p.a<=0)ps.splice(i,1);
+    }
+    cx.globalAlpha=1;requestAnimationFrame(loop);
+  }
+  loop();
+  function boom(x,y){for(var i=0;i<50;i++)ps.push(mk(x,y,true))}
+  document.getElementById('open').onclick=function(e){
+    boom(e.clientX,e.clientY);
+    var s=document.getElementById('story');s.style.display='block';s.classList.add('show');
+    setTimeout(function(){s.scrollIntoView({behavior:'smooth'})},400);
+    watch();
+  };
+  document.getElementById('burst').onclick=function(e){boom(e.clientX,e.clientY);boom(innerWidth/2,innerHeight/2)};
+  addEventListener('click',function(e){if(e.target.tagName!=='BUTTON')boom(e.clientX,e.clientY)});
+  function watch(){
+    var cs=document.querySelectorAll('.card');
+    if(!('IntersectionObserver' in window)){cs.forEach(function(c){c.classList.add('in')});return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.2});
+    cs.forEach(function(c,i){c.style.transitionDelay=(i%3)*120+'ms';io.observe(c)});
+  }
+})();
+</script>
+</body>
+</html>
